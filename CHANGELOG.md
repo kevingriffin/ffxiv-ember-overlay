@@ -1,5 +1,7 @@
 # Changelog
 
+Bump
+
 ## 0.30.0-alpha
 
 **Released: [in staging]**
