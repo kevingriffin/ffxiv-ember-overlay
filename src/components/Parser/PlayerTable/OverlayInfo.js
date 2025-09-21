@@ -48,10 +48,6 @@ class OverlayInfo extends React.Component {
 				<h3>Ember Overlay</h3>
 				{this.getInfoText()}
 
-				<div id='funding'>
-					{this.getFundingText()}
-				</div>
-
 				<h3>Latest Changes</h3>
 				{this.state.changelog}
 			</div>
