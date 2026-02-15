@@ -88,11 +88,6 @@
 		"eslint-formatter-summary-chart": "^0.2.1",
 		"eslint-plugin-align-assignments": "^1.1.2",
 		"eslint-plugin-react": "^7.31.10",
-		"husky": "^8.0.1",
-		"pre-commit": "^1.2.2",
 		"semantic-ui-less": "2.4.1"
-	},
-	"pre-commit": [
-		"eslint"
-	]
+	}
 }
