@@ -28,7 +28,6 @@ public/logs/*
 
 # lock files
 yarn.lock
-package-lock.json
 
 # developer junkyard
 /misc
