@@ -34,7 +34,7 @@
             src = ./.;
 
             nodejs = pkgs.nodejs_20;
-            npmDepsHash = "sha256-0bvWIDEjz/X/6S0OA4wPvm/mT9jxhb+oyZ1XHfo2I3o=";
+            npmDepsHash = "sha256-iu1mN/2tNgG/VEJpiDi/qfc4UhYzJNBGaUwhHsjgPsM=";
 
             NODE_OPTIONS = "--openssl-legacy-provider";
             SKIP_PREFLIGHT_CHECK = "true";
@@ -73,7 +73,7 @@
             type = "app";
             program = toString (
               pkgs.writeShellScript "deploy" ''
-                ${pkgs.rsync}/bin/rsync -avz --delete ${self.packages.${system}.default}/ tomoyo:/var/www/ffxiv.kevin.jp/
+                ${pkgs.rsync}/bin/rsync -avz --checksum --delete ${self.packages.${system}.default}/ tomoyo:/var/www/ffxiv.kevin.jp/
               ''
             );
           };
