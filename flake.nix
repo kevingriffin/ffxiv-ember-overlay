@@ -8,6 +8,8 @@
   outputs =
     { self, nixpkgs }:
     let
+      version = "1.10.0";
+
       allSystems = [
         "aarch64-darwin"
       ];
@@ -28,7 +30,7 @@
         {
           default = pkgs.buildNpmPackage {
             pname = "ffxiv-ember-overlay";
-            version = "1.9.7";
+            inherit version;
             src = ./.;
 
             nodejs = pkgs.nodejs_20;
@@ -42,7 +44,7 @@
             REACT_APP_ROUTER_BASE = "/";
             REACT_APP_HTTP_BASE = "/";
             REACT_APP_REDIRECT_URL = "https://ffxiv.kevin.jp";
-            REACT_APP_VERSION = "0.1.0";
+            REACT_APP_VERSION = version;
             REACT_APP_GITHUB_URL = "https://github.com/kevingriffin/ffxiv-ember-overlay";
             REACT_APP_DISCORD_URL = "https://discord.gg/invite";
             REACT_APP_CHANGELOG_URL = "https://github.com/kevingriffin/ffxiv-ember-overlay/blob/master/CHANGELOG.md";
